@@ -1,6 +1,12 @@
 /* To avoid CSS expressions while still supporting IE 7 and IE 6, use this script */
 /* The script tag referring to this file must be placed before the ending body tag. */
 
+/* Use conditional comments in order to target IE 7 and older:
+	<!--[if lt IE 8]><!-->
+	<script src="ie7/ie7.js"></script>
+	<!--<![endif]-->
+*/
+
 (function() {
 	function addIcon(el, entity) {
 		var html = el.innerHTML;
@@ -69,27 +75,27 @@
 		'gf-icon-cc': '&#xe63c;',
 		'gf-icon-resize-shrink': '&#xe63d;',
 		'gf-icon-resize-enlarge': '&#xe63e;',
-		'gf-icon-pictures': '&#xe63f;',
-		'gf-icon-cycle': '&#xe640;',
-		'gf-icon-cw': '&#xe641;',
-		'gf-icon-rocket': '&#xe642;',
-		'gf-icon-network': '&#xe643;',
-		'gf-icon-key': '&#xe644;',
-		'gf-icon-lock': '&#xe645;',
-		'gf-icon-lock-open': '&#xe646;',
-		'gf-icon-infinity': '&#xe647;',
-		'gf-icon-dot': '&#xe648;',
+		'gf-icon-pictures': '&#xe65a;',
+		'gf-icon-cycle': '&#xe65b;',
+		'gf-icon-cw': '&#xe65c;',
+		'gf-icon-rocket': '&#xe65d;',
+		'gf-icon-network': '&#xe65e;',
+		'gf-icon-key': '&#xe65f;',
+		'gf-icon-lock': '&#xe660;',
+		'gf-icon-lock-open': '&#xe661;',
+		'gf-icon-infinity': '&#xe662;',
+		'gf-icon-dot': '&#xe663;',
 		'gf-icon-search': '&#xe619;',
-		'gf-icon-menu': '&#xe649;',
-		'gf-icon-safari': '&#xe64a;',
-		'gf-icon-opera': '&#xe64b;',
-		'gf-icon-IE': '&#xe64c;',
-		'gf-icon-firefox': '&#xe64d;',
-		'gf-icon-chrome': '&#xe64e;',
-		'gf-icon-css3': '&#xe64f;',
-		'gf-icon-html5': '&#xe650;',
-		'gf-icon-html52': '&#xe651;',
-		'gf-icon-windows8': '&#xe652;',
+		'gf-icon-menu': '&#xe63f;',
+		'gf-icon-safari': '&#xe640;',
+		'gf-icon-opera': '&#xe641;',
+		'gf-icon-IE': '&#xe642;',
+		'gf-icon-firefox': '&#xe643;',
+		'gf-icon-chrome': '&#xe644;',
+		'gf-icon-css3': '&#xe645;',
+		'gf-icon-html5': '&#xe646;',
+		'gf-icon-html52': '&#xe647;',
+		'gf-icon-windows8': '&#xe648;',
 		'gf-icon-windows': '&#xe653;',
 		'gf-icon-android': '&#xe654;',
 		'gf-icon-finder': '&#xe655;',
@@ -97,19 +103,21 @@
 		'gf-icon-tux': '&#xe657;',
 		'gf-icon-earth': '&#xe658;',
 		'gf-icon-camera2': '&#xe659;',
-		'gf-icon-cog': '&#xe65a;',
+		'gf-icon-cog': '&#xe664;',
+		'gf-icon-flickr2': '&#xe649;',
+		'gf-icon-flickr3': '&#xe64a;',
+		'gf-icon-github2': '&#xe64b;',
+		'gf-icon-github3': '&#xe64c;',
+		'gf-icon-youtube': '&#xe64d;',
+		'gf-icon-youtube2': '&#xe64e;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),
-		i, attr, c, el;
+		i, c, el;
 	for (i = 0; ; i += 1) {
 		el = els[i];
 		if(!el) {
 			break;
-		}
-		attr = el.getAttribute('data-icon');
-		if (attr) {
-			addIcon(el, attr);
 		}
 		c = el.className;
 		c = c.match(/gf-icon-[^\s'"]+/);

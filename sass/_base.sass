@@ -34,22 +34,22 @@ $roxoEscuro: #5a346e
 $amarelo: #f1c40f
 $amareloEscuro: #cfa90f
 $laranja: #f97f15
-$vermelho: #e84c3d
-$vermelhoEscuro: #862c24
+$vermelho: #da251c
+$vermelhoEscuro: #740904
 $rosa: #ff2687
 $rosaEscuro: #931650
 $marrom: #402d21
 
-$brancoCinza: #fcfaf7
+$brancoCinza: #f7f7f7
 $cinzaClaro: #dbdbdb
-$cinza: #919191
+$cinza: #ababab
 $cinzaEscuro: #414042
 $black: #000
 
 
 
-$corPrincipal: $verde
-$corPrincipalHover: $verdeEscuro
+$corPrincipal: $vermelho
+$corPrincipalHover: $vermelhoEscuro
 $corPrincipalInverso: $brancoCinza
 
 
@@ -147,7 +147,7 @@ body
 	font-size: 12px
 	color: $corTexto
 	@include font
-	font-size: 11px
+	line-height: 150%
 
 	p
 		line-height: 150%
@@ -168,6 +168,9 @@ a
 	&:hover
 		color: $corLinkHover
 		text-decoration: none
+
+	img
+		width: 100%
 
 
 h1, h2, h3, h4, h5, h6

@@ -2,15 +2,13 @@
 // Header
 // ------------------------------------------------------------------
 
-body > section#contentWrapper
+body > section#contentWrapper, body > section:not(#banner)
 	opacity: 0
 	&.active
 		+animate(fadeInUp)
 
 header.active
-	#searchWrapper
-		+animate(fadeInUp, $delay: 1s)
-	#logo
+	.logo
 		+animate(bounceIn)
 	#menu
 		+animate(fadeInUp)
@@ -27,178 +25,473 @@ body
 	header
 		width: 100%
 		display: block
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 150px
+		z-index: 98
+		background: $branco
+		+box-shadow(rgba(0,0,0,0.1) 0px 2px 15px)		
 
 		& > section
 			width: 100%
 			display: block
 
-			&#topMenu
+			&#topHeader
 				background: $brancoCinza
 				height: 50px
+				+transition
 				
 				.container
 					overflow: visible
-
-				a
 					color: $corTexto
-					font-size: 12px
-					text-transform: uppercase
-					line-height: 50px
+					font-size: 10px
 
-				.lang
-					position: absolute
-					top: 0
-					left: -10px
-					height: 50px
-					text-align: center
+					.fbh-infos
+						display: block
+						position: absolute
+						left: -15px
+						right: 150px
+						top: 0
+						height: 50px
 
-					a
-						display: inline-block
-						padding: 0 10px
+						a, p
+							display: inline-block
+							padding: 0 15px	
+							font-size: 10px
+							line-height: 50px
 
-						&:not(.active)
-							+desaturate
-							opacity: 0.5
+						a
+							text-transform: uppercase
+							font-weight: 900
+
+						p
+							line-height: 30px
+
+						p:before
+							font-size: 20px
+							padding-right: 5px
+							color: $cinza
+							position: relative
+							bottom: -5px
 
 
+					.lang_search
+						width: 145px
+						display: block
+						position: absolute
+						right: 0
+						top: 0
+
+						a
+							display: block
+							float: left
+							padding: 0 5px
+							width: 20px
+							line-height: 50px
+
+							&:not(.active)
+								+desaturate
+								opacity: 0.5
+
+						a.icon
+							+icon
+							line-height: 50px
+							color: $corTexto
+							font-size: 25px
+							padding: 0 15px
+							width: 25px
+
+						& > div
+							display: none
+							position: absolute
+							top: 50px
+							right: 0
+							width: 380px
+							padding: 20px
+							background: $brancoCinza
+							z-index: 98
+							input, button
+								width: 260px
+								display: block
+								float: left
+								margin: 0
+								+border-radius(5px 0 0 5px)
+								border-right: 0
+							
+							button
+								width: 120px
+								+border-radius(0 5px 5px 0)
+								font-size: 12px
+								font-weight: 900
+
+			&#menu
+				height: 100px
+				.logo
+					+grid(2)
+					padding: 20px 0
 				nav
-					+grid(11)
-					float: right
-					text-align: right
+					+grid(10, $gutter-width: 0)
+					text-align: center
 					a
+						display: table-cell
 						padding: 0 20px
-						display: inline-block
+						font-size: 12px
+						text-transform: uppercase
+						height: 100px
+						vertical-align: middle
+						line-height: 18px
+						color: $cinzaEscuro
+
 						&:hover
 							background: $corPrincipal
 							color: $corPrincipalInverso
 
-			&#logoWrapper
-				height: 90px
-				padding: 20px 0
-				position: relative
-
-				img
-					width: 100%
-
-				.topBanner
-					display: block
-					float: right
-					width: 768px
-					height: 90px
-
-				.logo
-					display: block
-					float: left
-					width: 320px
-					height: 90px
-
-			&#menu
-				nav
-					+grid(12)
-					text-align: center
-					a
-						display: inline-block
-						padding: 0 14px
-						font-size: 13px
-						line-height: 30px
-						text-transform: uppercase
-						&:hover
-							background: $brancoCinza
 				#navMobile
 					display: none
+
+		&.lean
+			height: 80px
+			& > section
+				&#topHeader
+					height: 0
+					overflow: hidden
+				&#menu
+					height: 80px
+					.logo
+						+grid(2)
+						padding: 10px 0
+					nav
+						a
+							height: 80px
+
 	& > section
-		width: 100%
-		display: block
+		padding: 40px 0
+
+		& > .container > h1
+			text-align: center
 
 	#banner
 		$larguraBanner: 100%
-		$alturaBanner: 500px
-
-		+animate(fadeIn, $delay: 0.5s)
-
+		$alturaBanner: 550px
+		top: 150px
 		width: $larguraBanner
 		height: $alturaBanner
 		display: block
 		position: relative
-		margin-top: 20px
-		ul
-			width: $larguraBanner
-			height: $alturaBanner
-			display: block
-			position: relative
+		background: url(../img/no-banner.jpg) center center no-repeat
 
-			li
-				width: $larguraBanner
-				height: $alturaBanner
-				display: block
-				position: relative
-				background-position: center center
-
-				a
-					position: absolute
-					left: 100px
-					right: 500px
-					bottom: 60px
-					padding: 20px
-					background: rgba($verdeEscuro, 0.9)
-					font-size: 20px
-					color: $branco
-					text-transform: uppercase
-					line-height: 120%
-					+animate(fadeInLeftBig)
-
-					&:hover
-						background: rgba($verde, 1)
-		&.active
-			.accordion
-				+animate(bounceIn)
-
-		#bannerNav
+		.dot
+			background: rgba($corPrincipalHover, 0.9) url(../img/dot.png) center center
+			background-attachment: fixed
 			position: absolute
+			top: 0
 			left: 0
 			right: 0
-			bottom: 20px
-			z-index: 99
+			bottom: 0
+			z-index: 1
+
+		.no-banner
+			+bgCover
 			text-align: center
-			a
-				text-indent: -9999px
-				display: inline-block
-				+border-radius(50%)
-				background: $brancoCinza
-				width: 10px
-				height: 10px
-				margin: 0 10px
-
-				&.activeSlide
-					background: $verde
-					+scale(1.7)
-		.accordion
 			position: absolute
-			top: 50px
-			right: 100px
-			z-index: 99
-
-	.associe-se
-		width: 100%
-		padding: 35px 0
-		background: $verde
-		color: $brancoCinza
-		font-size: 40px
-		text-transform: uppercase
-		font-weight: 700
-		display: block
-		text-align: center
-		line-height: 40px
-		span
-			font-size: 22px
 			display: block
-			font-weight: 300
-			text-transform: normal
+			top: 100px
+			bottom: 20px
+			left: 20px
+			right: 20px
+			z-index: 2
+			color: $branco
+			+animate(bounceInDown, $delay: 0.5s)
+
+			*
+				color: $branco
+
+			h1
+				margin: 30px 0
+				font-size: 36px
+
+			p
+				+border-radius(10px)
+				font-size: 12px
+				font-weight: 900
+				border: 2px solid $branco
+				width: 180px
+				display: block
+				margin: 0 auto
+				padding: 10px
+				text-transform: uppercase
+			nav.social
+				text-align: center
+				display: block
+				margin-top: 50px
+				a
+					display: inline-block
+					+icon
+					font-size: 30px
+					padding: 15px
+					+scale(0.7)
+					+border-radius(100%)
+					margin: 0 -5px
+
+					&:hover
+						background: $brancoCinza
+						color: $corPrincipalHover
+						+scale(1)
+
+	.noticiasDestaque
+		margin-top: 150px
+		padding-top: 100px
+		h1
+			text-align: center
+
+		a
+			+grid(4, $gutter-width: 2px)
+			height: 298px
+			display: block
+			float: left
+			margin: 1px
+			position: relative
 			+transition
-		&:hover
-			font-size: 30px
-			span
-				font-size: 30px
+			background: $black
+
+			img
+				+desaturate
+				opacity: 0.6
+				+transition
+
+			h1
+				background: rgba($corPrincipal, 0.8)
+				padding: 20px
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				font-size: 20px
+				margin: 0
+				color: $corPrincipalInverso
+				font-weight: 300
+				+transition
+
+				b
+					+transition
+					font-size: 12px
+					font-weight: 900
+					display: block
+					line-height: 50px
+					height: 0
+					overflow: hidden
+					padding-top: 10px
+
+			&:hover
+				img
+					+desaturate($gray: 0)
+					opacity: 1
+				h1
+					background: rgba($corPrincipalHover, 0.9)
+					b
+						height: 50px
+
+	.noticiasTab
+		padding: 40px 0
+		margin-top: 150px
+		background: $brancoCinza
+		nav
+			position: absolute
+			top: -120px
+			left: 0
+			right: 0
+			display: table
+			width: 100%
+
+			a
+				padding: 0 20px 
+				height: 80px
+				display: table-cell
+				vertical-align: middle
+				font-size: 32px
+				line-height: 32px
+				+font(100)
+				color: $cinza
+				width: 260px
+				text-align: center
+				text-transform: uppercase
+
+				span
+					display: block
+					font-size: 20px
+
+				&.selected
+					color: $cinzaEscuro
+					background: $brancoCinza
+
+		.container > div
+			overflow: hidden
+
+			&.currentTab
+				+animate(bounceInUp)
+
+			a
+				color: $cinzaEscuro
+				font-size: 14px
+				line-height: 22px
+				display: block
+				font-weight: 400
+
+				h2
+					color: $corPrincipal
+					font-size: 32px
+					font-weight: 400
+					text-transform: none
+
+				span
+					display: block
+					padding: 15px 0
+					color: $cinza
+					font-size: 11px
+					font-weight: 400
+
+			article
+				+grid(7, $gutter-width: 0)
+				position: relative
+				a:after
+					background: red
+					height: 50px
+					display: block
+					width: 50px
+					z-index: 999
+
+			aside
+				+grid(4, $gutter-width: 0)
+				float: right
+
+				a
+					margin-bottom: 40px
+
+					h2
+						color: $corPrincipal
+						font-size: 22px
+						margin-bottom: 0
+
+					span
+						padding: 5px 0
+
+					&.button3d
+						color: $brancoCinza
+
+			&#revistaTab
+				& > img
+					width: 280px
+					display: block
+					float: left
+					height: auto
+					margin-right: 20px
+
+				article
+					+grid(4, $gutter-width: 0)
+
+				aside
+					padding-bottom: 15px
+					h3
+						font-size: 20px
+						margin-bottom: 5px
+
+	.newsletter
+		background: $corPrincipal
+
+		h1
+			color: $corPrincipalInverso
+			+grid(7, $gutter-width: 0)
+			margin: 0
+			font-size: 40px
+			height: 100px
+
+		form
+			+grid(4, $gutter-width: 0)
+			float: right
+			padding-top: 30px
+
+			input, button
+				float: left
+				margin: 0
+				display: block
+				width: 70%
+				+border-radius(5px 0 0 5px)
+
+			button
+				width: 30%
+				+border-radius(0 5px 5px 0)
+				background: $corPrincipalHover
+								
+	.eventos
+		a.verTodos
+			text-transform: uppercase
+			font-size: 16px
+			position: absolute
+			top: 30px
+			right: 0
+			font-weight: 700
+
+		ul
+			li
+				+grid(4, $gutter-width: 2px)
+				position: relative
+				height: 500px
+				overflow: hidden
+
+				a
+					display: block
+					width: 100%
+					height: 100%
+					
+					.date
+						position: absolute
+						background: rgba($corPrincipal, 0.8)
+						font-size: 40px
+						display: block
+						padding: 20px
+						top: 20px
+						right: 20px
+						color: $brancoCinza
+						text-align: center
+						text-transform: uppercase
+						+transition
+						z-index: 99
+
+						span
+							font-size: 20px
+							display: block
+							margin-top: 10px
+
+
+					.caption
+						position: absolute
+						background: rgba($black, 0.7)
+						padding: 20px
+						bottom: 0
+						left: 0
+						right: 0
+						+clearfix
+						+transition
+
+						h2
+							font-size: 24px
+							font-weight: 100
+							color: $brancoCinza
+							margin-bottom: 10px
+						p
+							color: $brancoCinza
+							+transition
+							display: none
+
+					&:hover
+						.caption p
+							display: block
+							
+						.date
+							background: rgba($corPrincipalHover, 1)
+							+scale(1.4)
 
 // ------------------------------------------------------------------
 // Body
@@ -209,6 +502,7 @@ body
 		padding-top: 50px
 		+grid-system(12)
 		position: relative
+		margin-top: 150px
 		+clearfix
 
 		.wrapper
@@ -269,6 +563,8 @@ body
 body
 	#contentWrapper
 		.wrapper
+
+
 			.eventos
 				& > a
 					text-transform: uppercase
@@ -780,135 +1076,6 @@ body
 // Sidebar
 // ------------------------------------------------------------------
 
-#pesquisar.accordion
-	width: 100%
-	display: block
-	min-height: 100px
-	background: $brancoCinza
-	+border-radius(5px)
-	.accord-header
-		cursor: pointer
-		font-size: 16px
-		font-weight: bold
-		padding: 20px
-		text-transform: uppercase
-		&.active
-			background: rgba($black, 0.03)
-			color: $verde
-	.accord-content
-		display: none
-		background: rgba($black, 0.03)
-
-		&.active
-			display: block
-		
-		form
-			padding: 2px 20px 60px 20px
-			position: relative
-			display: block
-			+clearfix
-
-			select, input
-				display: block
-				width: 100%
-				margin: 0 0 10px 0
-				float: left
-			button.button
-				position: absolute
-				bottom: 0
-				left: 0
-				right: 0
-				+border-radius(0 0 5px 5px)
-				height: 50px
-				margin: 0
-				width: 100%
-			.uf
-				width: 70px
-			.cidade
-				width: 115px
-				margin: 0 10px 10px 10px
-			.bairro
-				width: 115px
-
-			.periodo
-				label, input
-					display: block
-					float: left
-
-				label
-					font-size: 17px
-					color: $corTexto
-					width: 80px
-					line-height: 40px
-					font-weight: 400
-
-				input
-					width: 240px
-
-			.ms-parent
-				width: 100%
-
-				& > button
-					width: 100%
-					height: 40px
-					font-size: 16px
-					padding: 8px 10px
-					position: relative
-					margin-top: 0
-					opacity: 1
-					+box-shadow(none)
-
-					span
-						text-transform: none
-						font-size: 16px
-						line-height: 36px
-						color: $cinzaEscuro
-						+font(400)
-						letter-spacing: 0
-						opacity: 1
-						padding-left: 10px
-
-					& > div
-						background: $branco url(../img/form-select.png) right center no-repeat
-						width: 36px
-						height: 36px
-
-						&.open
-							background: $branco url(../img/form-select-open.png) right center no-repeat
-				.ms-drop
-					overflow: visible !important
-					li
-						display: block
-						margin: 5px 0
-						height: 25px
-						+font
-						font-size: 14px
-						line-height: 25px
-						padding: 5px
-
-						&:hover
-							background: $brancoCinza
-
-						label
-							overflow: visible
-
-							input[type="checkbox"]
-								width: 25px
-								margin-right: 10px
-								margin-bottom: 0
-						
-
-		&.active
-			form
-				+animate(fadeInUp)
-		&.pesquisa
-			display: block
-
-
-body:not(#home) #sidebar .widget
-	&#enquete, &#newsletter
-		display: none
-
 
 #sidebar
 	.widget
@@ -987,167 +1154,152 @@ body:not(#home) #sidebar .widget
 // ------------------------------------------------------------------
 body
 	footer
-		$ninesixty-grid-width: 1200px
-		background: $brancoCinza
-		padding: 50px 0
-		width: 100%
-		+clearfix
 		display: block
-
-		& > img
-			display: block
-			width: 360px
-			float: none
-			margin: 0 auto
-
-		& > ul
-			display: block
-			margin-top: 50px
-			+clearfix
-			li
-				+grid(2)
-				h1
-					font-size: 15px
-					font-weight: 700
-					margin-bottom: 10px
-				a
-					display: block
-					padding: 7px 0
-					font-size: 13px
-					font-weight: 400
-	.direitos
+		+clearfix
 		width: 100%
-		+clearfix
-		display: block
-		line-height: 60px
-		background: $verde
-		text-align: center
-		text-transform: uppercase
-		font-weight: 700
-		font-size: 10px
-		color: $brancoCinza
+		position: relative
+		
+		.social
+			background: $brancoCinza
+			text-align: center
+			display: block
+			padding: 40px 0
+			width: 100%
+			height: 110px
+			a
+				display: inline-block
+				+icon
+				font-size: 40px
+				line-height: 40px
+				height: 40px
+				padding: 33px
+				+scale(0.7)
+				+border-radius(100%)
+				margin: 0 -5px
+				border: 2px solid $cinzaClaro
+				color: $cinzaClaro
 
+				&:hover
+					background: $corPrincipal
+					color: $corPrincipalInverso
+					+scale(1)
+					border-color: transparent
 
+		.contatos
+			display: block
+			position: absolute
+			top: 190px
+			left: 0
+			right: 0
+			height: 600px
+			background: rgba($corPrincipalHover, 0.9) center center
+			+transition
+			overflow: hidden
 
+			.container
+				$ninesixty-grid-width: 1200px
+				padding-top: 50px
+				border-bottom: 1px solid $brancoCinza
+				+animate(bounceInUp)
 
-// ------------------------------------------------------------------
-// Outros
-// ------------------------------------------------------------------
-
-.daterangepicker
-	display: none
-	+font
-	.calendar
-		+clearfix
-		max-width: none
-		table
-			border: 0
-			td
-				+font
-				line-height: 22px
-				&.active
-					&, &:hover
-						background: $verde
-
-			thead tr:first-child th
-				font-size: 15px
-				font-weight: 700
-				text-transform: uppercase
-
-			th
-				+font
-				line-height: 30px
-				height: 30px
-				vertical-align: middle
-
-				.icon-arrow-right, .icon-arrow-left
-					background-position: center center
-					background-repeat: no-repeat
-					width: 30px
-					height: 30px
+				img
+					width: 320px
+					height: 128px
+					margin: 40px auto
 					display: block
 
-				.icon-arrow-right
-					background-image: url(../img/calendar-next.png)
-				.icon-arrow-left
-					background-image: url(../img/calendar-prev.png)
+				p
+					color: $brancoCinza
+					font-size: 16px
+					line-height: 24px
+					vertical-align: middle
+					padding: 30px 15px 30px 85px
+					font-family: 'Lato'
+					font-weight: 300
 
+					&.gf-icon-phone, &.gf-icon-mail
+						+grid(3, $gutter-width: 0)
 
-	.ranges
-		width: 190px
-		.btn.btn-small
-			width: 187px
-			display: block
-			margin-bottom: -5px
-			&.btn
-				+button3d
+					&.gf-icon-location
+						+grid(6, $gutter-width: 0)
+
+					b
+						font-weight: 900
+
+					&:before
+						position: absolute
+						font-size: 40px
+						line-height: 40px
+						padding: 15px
+						border: 2px solid $brancoCinza
+						color: $brancoCinza
+						left: 0
+						+border-radius(100%)
+						top: 20px
+						font-family: 'gf-icons'
+
+			a.gf-icon-map
+				display: block
+				margin: 0 auto
+				width: 140px
+				height: 20px
+				line-height: 20px
+				padding-top: 100px
+				padding-bottom: 20px
+				color: $brancoCinza
 				font-size: 13px
-				&.cancelBtn
-					background: $cinzaClaro
-					color: $cinzaEscuro
+				font-weight: 900
+				font-family: 'Lato'
+				position: relative
+				text-align: center
+				margin-top: 20px
+				+transition
 
-.modal
-	background: $verde
-	padding: 30px 0
-	+box-shadow(rgba($black, 0.2) 0 -30px 40px inset)
-	display: block
-	float: none
-	width: 100%
-	display: none
-	*
-		color: $brancoCinza
 
-	a.btClose
-		width: 50px
-		height: 50px
-		position: absolute
-		z-index: 99
-		top: 0
-		right: 0
-		font-size: 50px
-		+fontIcon("\e61b")
-		color: $verdeEscuro
-		&:hover
-			color: $brancoCinza
+				&:before
+					font-size: 80px
+					line-height: 80px
+					top: 20px
+					left: 50%
+					margin-left: -40px
+					font-family: 'gf-icons'
+					position: absolute
+					font-weight: 100
 
-	h1, h2
-		+grid(12)
-	h1
-		margin-bottom: 0
+		.contatos.showMap
+			+animate(bgHide, $delay: 0.5s)
 
-	h2
-		font-weight: 700
-		font-size: 24px
-		margin-bottom: 30px
+			.container
+				+animate(bounceOutUp)
 
-	input
-		border-color: $verdeEscuro
+			a.gf-icon-map
+				background: $corPrincipalHover
+				opacity: 0.9
+				+box-shadow(rgba($black, 0.1) 0 -5px 0 inset)
+				+border-radius(15px)
 
-	label
-		font-size: 14px
-		font-weight: 700
-		text-transform: uppercase
+				&:hover
+					opacity: 1
 
-	input[type="button"]
-		width: 360px
-		height: 60px
-		display: block
-		float: right
-		margin-right: 20px
-		background: $brancoCinza
-		color: $cinzaEscuro
-		height: 38px
-		margin-top: 25px
-	div > a
-		font-size: 14px
-		text-align: right
-		display: block
-		float: right
-		line-height: 18px
-		font-weight: 700
-		color: $verdeEscuro
-		&:hover
-			color: $brancoCinza
+		.map
+			height: 600px
+			display: block
+
+		.direitos
+			padding: 20px 0
+			height: 12px
+			font-size: 12px
+			line-height: 12px
+			background: $brancoCinza
+			color: $cinza
+			font-weight: 400
+			text-transform: uppercase
+			display: block
+			width: 100%
+			text-align: center
+
+
+
 
 
 // ------------------------------------------------------------------
@@ -1246,34 +1398,3 @@ body
 			background: $cinzaClaro
 			color: $cinzaEscuro
 			+border-radius(0 5px 5px 0)
-//
-//	.fake-file
-//		position: absolute
-//		top: 0px
-//		left: 0px
-//		right: 0px
-//		bottom: 0px
-//		padding: 0
-//		margin: 0
-//		z-index: 2
-//		input
-//			display: block
-//			width: 100%
-//			padding-right: 100px
-//			margin: 0
-//
-//		&:after
-//			display: block
-//			width: 250px
-//			position: absolute
-//			top: 0
-//			bottom: 0
-//			right: 0
-//			+button3d
-//			content: "Fazer upload"
-//			height: 40px
-//			background: $cinzaClaro
-//			color: $cinzaEscuro
-//			+border-radius(0 5px 5px 0)
-//
-//

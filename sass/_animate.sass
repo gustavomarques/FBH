@@ -9,6 +9,11 @@
 =animate($name: fadeIn, $duration: 1s, $delay: .2s, $function: ease, $mode: both)
   +experimental(animation, $name $duration $delay $function $mode)
 
+@-webkit-keyframes bgHide
+  100%
+    background: none
+
+
 @-webkit-keyframes pulseCheck
   0%
     -webkit-transform: scale(1)

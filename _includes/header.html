@@ -9,7 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{page.title}} - Sindeventos</title>
+	<title>{{page.title}} - Federação Brasileira de hospitais</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,103 +24,43 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<div class="modal login close">
-		<form class="wrapper">
-			<a href="#" title="" class="btClose"></a>
-			<h1>Área restrita</h1>
-			<h2>Informe os campos abaixo para acessar nosso sitema</h2>
-			<div class="grid_4">
-				<label>Nome de usuário</label>
-				<input type="text">
-				<a href="#" title="">Clique aqui se você esqueceu seu usuário!</a>
-			</div>
-			<div class="grid_4">
-				<label>Senha</label>
-				<input type="text">
-				<a href="#" title="">Clique aqui se você esqueceu sua senha!</a>
-			</div>
-			<div class="grid_4">
-				<input type="button" name="" value="Fazer login" onClick="location.href='obrigado.html'">
-			</div>
-			
-		</form>
-	</div>
-
-	<div class="modal newsletter close">
-		<form class="wrapper">
-			<a href="#" title="" class="btClose"></a>
-			<h1>Newsletter</h1>
-			<h2>Para receber nossa newsletter é fácil, basta preencher os campos abaixo</h2>
-			<div class="grid_4">
-				<label>Insira seu nome</label>
-				<input type="text">
-			</div>
-			<div class="grid_4">
-				<label>Insira seu e-mail</label>
-				<input type="text">
-			</div>
-			<div class="grid_4">
-				<label>Insira seu telefone</label>
-				<input type="text">
-			</div>
-			<input type="button" name="" value="Enviar mensagem" onClick="location.href='obrigado.html'">
-		</form>
-	</div>
-	<header>
-		<section id="topMenu">
+	<header class="active">
+		<section id="topHeader">
 			<div class="container">
-				<div class="lang">
+				<div class="fbh-infos">
+					<a href="#" title="">Revista visão hospitalar</a>
+					<a href="#" title="">guia de fornecedores</a>
+					<p class="gf-icon-location">SRTVS Qd. 701 – Conj. E Nº 130, Bl. 03 - 5º andar - Ed. Palácio do Rádio I - Brasília / DF - CEP: 70340-901</p>
+					<p class="gf-icon-phone">(61) 3322-3330</p>
+				</div>
+				<div class="lang_search">
 					<a href="#" title="" class="active"><img src="{{ site.url }}img/flag-br.png" alt=""></a>
 					<a href="#" title=""><img src="{{ site.url }}img/flag-usa.png" alt=""></a>
 					<a href="#" title=""><img src="{{ site.url }}img/flag-es.png" alt=""></a>
+					<a href="#" title="" class="icon">&#xe619</a>
+					<div>
+						<input type="text" name="" value="" placeholder="">
+						<button type="">Pesquisar</button>
+					</div>
 				</div>
-				<nav>
-					<a href="associe-se.html" title="">Associe-se</a>
-					<a href="cursos.html" title="">cursos</a>
-					<a href="licitacoes.html" title="">Licitações</a>
-					<a href="dicas.html" title="">Dicas e assessoria</a>
-					<a href="uteis.html" title="">informações úteis</a>
-					<a href="distancias.html" title="">distâncias</a>
-					<a href=".html" title="" class="newsletter_link">newsletter</a>
-					<a href=".html" title="" class="login_link">área restrita</a>
-				</nav>
-			</div>
-		</section>
-
-		<section id="logoWrapper">
-			<div class="container">
-				<a href="index.html" class="logo">
-					<img src="{{ site.url }}img/logo-sindeventos2.png" alt="">
-				</a>
-				<a href="http://google.com" target="blank" class="topBanner">
-					<img src="{{ site.url }}imgTemp/top-banner.png" alt="">
-				</a>
 			</div>
 		</section>
 
 		<section id="menu">
 			<div class="container">
-				<!--
-				<nav>
-				{% for page in site.pages %}
-					<a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
-				{% endfor %}
-				</nav>
-				-->
+				<a href="index.html" title="" class="logo">
+					<img src="img/logo-fbh.png">
+				</a>
 				<nav id="nav">
-					<a href="o_sindicato.html" title="O Sindicato">O Sindicato</a>
-					<a href="servicos.html" title="Serviços">Serviços</a>
-					<a href="sindicalizados.html" title="Serviços">Sindicalizados</a>
-					<a href="eventos.html" title="Eventos">Eventos</a>
-					<a href="sala_de_imprensa.html" title="Sala de imprensa">Sala de imprensa</a>
-					<a href="parceiros.html" title="parceiros">parceiros e convênios</a>
-					<a href="curriculo.html" title="curriculo">envio de curriculo</a>
-					<a href="downloads.html" title="downloads">downloads</a>
-					<a href="contato.html" title="contato">contato</a>
-					<!--
-					<a href="index.html" title="Home">Home</a>
-					<a href=".html" title=""></a>
-					-->
+					<a href="sobre_fbh.html" title="">Sobre <br>a FBH</a>
+					<a href="#" title="">Representação <br> governamental</a>
+					<a href="#" title="">Publicações <br> FBH</a>
+					<a href="#" title="">Indicadores <br> de saúde</a>
+					<a href="#" title="">Legislação</a>
+					<a href="#" title="">Notícias <br> da área</a>
+					<a href="#" title="">Calendário <br> de eventos</a>
+					<a href="#" title="">Sala de <br> imprensa</a>
+					<a href="#" title="">fale <br> conosco</a>
 				</nav>
 
 				<div id="navMobile">

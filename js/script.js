@@ -13,12 +13,12 @@ $("body > section").waypoint(function() {
 
 $("body > header").waypoint(function() {
 	$(this).removeClass("lean");
-}, { offset: -50 });
+}, { offset: -100 });
 
 
 $("body > header").waypoint(function() {
 	$(this).addClass("lean");
-}, { offset: -250 });
+}, { offset: -110 });
 
 $( ".lang_search .icon" ).click(function() {
 	$( ".lang_search div" ).slideToggle( "slow", function() {});
@@ -28,7 +28,8 @@ $( ".lang_search .icon" ).click(function() {
 $(".noticiasTab nav").idTabs(); 
 
 $( "footer .gf-icon-map" ).click(function() {
-	$( "footer .contatos" ).toggleClass("showMap");
+	$( this ).delay(1000).toggleClass("showMap");
+	$( "footer .contatos" ).slideToggle( "slow" );
     var $self = $(this);
     if ($self.text() == "Ver no mapa")
        $self.text("Fechar mapa");
@@ -36,6 +37,13 @@ $( "footer .gf-icon-map" ).click(function() {
         $self.text("Ver no mapa");
 	return(false);
 });
+
+$('#nav').find('ul').hide();
+
+$('#nav li:has(ul)').addClass('com-submenu').hover(
+	function(){$(this).find('> ul').slideDown('fast');},
+	function(){$(this).find('> ul').slideUp('Slow');}
+);	
 
 
 

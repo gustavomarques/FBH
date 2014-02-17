@@ -32,7 +32,7 @@ body
 		height: 150px
 		z-index: 98
 		background: $branco
-		+box-shadow(rgba(0,0,0,0.1) 0px 2px 15px)		
+		+box-shadow(rgba(0,0,0,0.2) 0px 2px 20px)		
 
 		& > section
 			width: 100%
@@ -44,21 +44,25 @@ body
 				+transition
 				
 				.container
-					overflow: visible
 					color: $corTexto
 					font-size: 10px
+					+clearfix
+					overflow: visible
+					height: 50px
+					display: block
+
 
 					.fbh-infos
 						display: block
 						position: absolute
-						left: -15px
+						left: 10px
 						right: 150px
 						top: 0
 						height: 50px
 
 						a, p
 							display: inline-block
-							padding: 0 15px	
+							padding: 0 10px	
 							font-size: 10px
 							line-height: 50px
 
@@ -131,22 +135,53 @@ body
 				.logo
 					+grid(2)
 					padding: 20px 0
-				nav
-					+grid(10, $gutter-width: 0)
+				#nav
+					+grid(10)
 					text-align: center
-					a
-						display: table-cell
-						padding: 0 20px
-						font-size: 12px
-						text-transform: uppercase
+					position: relative
+					li
 						height: 100px
-						vertical-align: middle
-						line-height: 18px
-						color: $cinzaEscuro
+						float: left
+						position: relative
+						a
+							text-transform: uppercase
+							padding: 0 16px
+							font-size: 12px
+							display: table-cell
+							line-height: 18px
+							vertical-align: middle
+							height: 100px
+							color: $cinzaEscuro
+
+						ul
+							display: block
+							background: $corPrincipal
+							width: 250px
+							position: absolute
+							top: 100px
+							left: 0px
+							overflow: hidden
+
+							li
+								display: block
+								color: $brancoCinza
+								float: none
+								height: auto
+								a
+									display: block
+									height: auto
+									padding: 15px 30px
+									border-top: 1px solid rgba($corPrincipalHover, 0.3)
+									color: $brancoCinza
+									text-align: left
+
+									&:hover
+										background: $corPrincipalHover
 
 						&:hover
 							background: $corPrincipal
-							color: $corPrincipalInverso
+							a
+								color: $corPrincipalInverso
 
 				#navMobile
 					display: none
@@ -493,659 +528,7 @@ body
 							background: rgba($corPrincipalHover, 1)
 							+scale(1.4)
 
-// ------------------------------------------------------------------
-// Body
-// ------------------------------------------------------------------
 
-body
-	#contentWrapper
-		padding-top: 50px
-		+grid-system(12)
-		position: relative
-		margin-top: 150px
-		+clearfix
-
-		.wrapper
-			$ninesixty-grid-width: 800px
-			+grid-system(12)
-			+clearfix
-			position: relative
-			float: left
-			display: block
-
-			& > *
-				+grid(12)
-				+clearfix
-				margin-bottom: 50px
-				display: block
-				position: relative
-
-				img
-					width: 100%
-					display: block
-					margin-bottom: 20px
-
-				p:last-child
-					margin-bottom: 0
-
-			& > section.container
-				$ninesixty-grid-width: 800px
-				+grid-system(12)
-				margin-left: 0
-				margin-right: 0
-
-				& > *
-					margin-left: 20px
-					margin-right: 20px
-				
-				.right
-					float: right
-
-		#sidebar
-			$ninesixty-grid-width: 1200px
-			+grid(4)
-
-
-@mixin greenTitle
-	color: $verde
-	text-transform: none
-	font-weight: 700
-	display: block
-	float: none
-
-.greenTitle
-	+greenTitle
-
-
-// ------------------------------------------------------------------
-// Content - Home
-// ------------------------------------------------------------------
-body
-	#contentWrapper
-		.wrapper
-
-
-			.eventos
-				& > a
-					text-transform: uppercase
-					font-size: 16px
-					position: absolute
-					top: 30px
-					right: 0
-					font-weight: 700
-
-				& > div
-					& > a
-						display: block
-						float: left
-						width: 378px
-						height: 248px
-						margin: 0 2px 2px 0
-						position: relative
-						+bgCover
-						
-						.date
-							position: absolute
-							background: rgba($verde, 0.8)
-							font-size: 40px
-							display: block
-							padding: 20px
-							top: 0
-							right: 0
-							color: $brancoCinza
-							text-align: center
-							text-transform: uppercase
-							+transition
-							z-index: 99
-
-							span
-								font-size: 20px
-								display: block
-								margin-top: 5px
-
-
-						.caption
-							position: absolute
-							background: rgba($black, 0.7)
-							padding: 20px
-							bottom: 0
-							left: 0
-							right: 0
-							+clearfix
-							+transition
-
-							h2
-								font-size: 24px
-								font-weight: 100
-								color: $brancoCinza
-								margin-bottom: 10px
-							p
-								color: $brancoCinza
-								+transition
-								display: none
-
-						&:hover
-							.caption p
-								display: block
-								
-							.date
-								background: rgba($verde, 1)
-								+scale(1.4)
-
-						&:first-child
-							height: 498px
-							.caption
-								p
-									display: block
-
-			.palavraPresidente
-				& > img
-					display: block
-					float: left
-					margin-right: 40px
-					margin-bottom: 20px
-					width: 360px
-
-			.noticias
-				padding: 20px 30px 40px 30px
-				background: $brancoCinza
-
-				ul
-					li
-						h2
-							font-size: 18px
-							margin-bottom: 10px
-							a
-								text-transform: none
-								font-weight: 700
-								line-height: 120%
-						.breadcrumb
-							background: $branco
-							padding: 5px 10px
-							+border-radius(5px)
-							margin: 10px 0
-							display: block
-
-						display: block
-						padding-bottom: 20px
-				& > a
-					+button3d
-					background: #ece6db
-					position: absolute
-					left: 0
-					bottom: 0
-					right: 0
-					height: 50px
-					line-height: 30px
-					color: $cinzaEscuro
-
-
-
-
-// ------------------------------------------------------------------
-// Content - O sindicato
-// ------------------------------------------------------------------
-body
-	#contentWrapper
-		.wrapper
-			.equipe
-				$ninesixty-grid-width: 800px
-				+grid-system(12)
-
-				.greenTitle
-					+grid(12)
-					+greenTitle
-
-				li
-					position: relative
-					margin: 0
-					padding: 20px
-					margin-bottom: 10px
-					+grid(3, $gutter-width: 0)
-					+box-sizing(border-box)
-					+border-radius(10px)
-					
-					&, & *
-						+transition
-
-					& > img
-						+border-radius(500px)
-						display: block
-						float: none
-						+scale(0.8)
-						margin-bottom: -10px
-					h3
-						font-size: 24px
-						text-align: center
-						margin-bottom: 0
-						height: 60px
-						display: table-cell
-						vertical-align: middle
-
-					h4
-						font-size: 13px
-						color: $verde
-						text-align: center
-
-					&:hover
-						background: $brancoCinza
-						h3
-							+translateY(25px)
-						h4
-							opacity: 0
-
-						& > img
-							+scale(1)
-
-
-
-// ------------------------------------------------------------------
-// Content - Servicos
-// ------------------------------------------------------------------
-
-body 
-	#contentWrapper
-		.wrapper 
-			.slider
-				.flexslider
-					margin: 0
-					img
-						margin: 0
-				.carousel
-					padding: 10px 60px
-					position: relative
-					background: $verde
-
-					img
-						margin: 0
-
-					.flex-direction-nav
-						.flex-prev, .flex-next
-							display: block
-
-							&:hover
-								color: $brancoCinza
-					li
-						cursor: pointer
-						margin: 1px
-						background: $black
-						width: 135px
-						a
-							display: block
-						img
-							+desaturate
-							opacity: 0.6
-
-					li.flex-active-slide
-						img
-							+desaturate(0)
-							opacity: 1
-
-			.listHorizontal
-				$ninesixty-grid-width: 800px
-				+grid-system(12)
-
-				.greenTitle
-					+grid(12)
-
-				a
-					+grid(12)
-					background: $brancoCinza
-					+box-sizing(border-box)
-					padding: 20px
-					+bordinha
-
-					& > img
-						display: block
-						width: 260px
-						margin: 0 20px 0 0
-						float: left
-
-					h3
-						margin-bottom: 10px
-						font-weight: 700
-
-					.date
-						display: block
-						font-size: 14px
-						color: $cinza
-						padding-bottom: 10px
-						border-bottom: 1px solid rgba(0,0,0,0.2)
-						margin-bottom: 10px
-						b
-							font-weight: 700
-							margin-left: 5px
-					&:hover
-						background: $verde
-						*
-							color: $brancoCinza
-
-
-
-
-
-
-// ------------------------------------------------------------------
-// Content - sindicalizar
-// ------------------------------------------------------------------
-
-body 
-	#contentWrapper
-		.wrapper 
-			.sindicalizar
-				$ninesixty-grid-width: 800px
-				+grid-system(12)
-
-				.greenTitle, & > p
-					+grid(12)
-
-				.greenTitle
-					+greenTitle
-
-				& > div
-					position: relative
-					margin: 0
-					padding: 20px
-					margin-bottom: 10px
-					+grid(4, $gutter-width: 0)
-					+box-sizing(border-box)
-					+border-radius(10px)
-					
-					&, & *
-						+transition
-
-					& > img
-						+border-radius(500px)
-						display: block
-						float: none
-						+scale(0.8)
-						margin-bottom: -15px
-					h3
-						font-size: 24px
-						text-align: left
-						margin-bottom: 0
-						display: block
-						text-align: center
-						padding: 20px 0
-						font-weight: 700
-						color: $verde
-
-					&:hover
-						background: $brancoCinza
-						h3
-							+translateY(10px)
-						h4
-							opacity: 0
-
-						& > img
-							+scale(1)
-
-
-
-
-
-// ------------------------------------------------------------------
-// Content - Eventos
-// ------------------------------------------------------------------
-
-body:not(#home)
-	#contentWrapper
-		.wrapper 
-			.eventos
-				& > div
-					& > a
-						height: 498px
-						+bgCover
-
-						.caption
-							p
-								display: block
-
-			.paginator
-				background: $brancoCinza
-				+border-radius(5px)
-				display: block
-				text-align: center
-				position: relative
-				height: 45px
-				padding: 10px 80px
-
-				a
-					display: inline-block
-					+border-radius(50%)
-					height: 25px
-					width: 25px
-					background: $branco
-					color: $verde
-					line-height: 25px
-					margin: 0 10px
-					+font(700)
-					font-size: 11px
-
-					&:hover, &.active
-						background: $verde
-						color: $brancoCinza
-						+scale(1.3)
-
-					&.next, &.prev
-						position: absolute
-						top: 0
-						bottom: 0
-						height: 45px
-						line-height: 45px
-						font-size: 30px
-						width: 70px
-						background: $brancoCinza
-						color: $verde
-						text-align: center
-						text-indent: 0
-						margin: 0
-						+fontIcon
-						&:hover
-							+scale(1)
-							background: $verde
-							color: $brancoCinza
-
-					&.next
-						right: 0
-						border-left: 2px solid $branco
-						+border-radius(0 5px 5px 0)
-						&:before
-							content: "\e62b"
-							line-height: 45px
-
-					&.prev
-						left: 0
-						border-right: 2px solid $branco
-						+border-radius(5px 0 0 5px)
-						&:before
-							content: "\e629"
-							line-height: 45px
-
-
-
-
-
-
-// ------------------------------------------------------------------
-// Content - Curriculos
-// ------------------------------------------------------------------
-
-body 
-	#contentWrapper
-		.wrapper 
-			form
-				$ninesixty-grid-width: 800px
-				+grid-system(12)
-
-				.greenTitle
-					+grid(12)
-
-				& > div
-					+grid(12)
-					margin-bottom: 40px
-
-				label
-					font-size: 14px
-					font-weight: 700
-					text-transform: uppercase
-
-				& > input[type="submit"], & > input[type="button"], & > button
-					float: right
-					margin-right: 20px
-					display: block
-					width: 250px
-					height: 60px
-
-
-
-// ------------------------------------------------------------------
-// Content - contatos
-// ------------------------------------------------------------------
-
-body 
-	#contentWrapper
-		.wrapper 
-			.map
-				p
-					font-size: 16px
-					b
-						display: block
-						font-size: 14px
-						margin-bottom: -5px
-
-
-// ------------------------------------------------------------------
-// Content - Uteis
-// ------------------------------------------------------------------
-
-body 
-	#contentWrapper
-		.wrapper 
-			.uteis
-				& > div
-					display: block
-					background: $brancoCinza
-					+box-sizing(border-box)
-					padding: 20px
-					+bordinha
-
-					h3
-						margin-bottom: 10px
-						font-weight: 700
-
-					p
-						display: block
-						font-size: 14px
-						color: $cinzaEscuro
-						margin-bottom: 10px
-						b
-							font-weight: 700
-							margin-left: 5px
-					&:hover
-						background: $verde
-						*
-							color: $brancoCinza
-
-
-
-
-// ------------------------------------------------------------------
-// Content - Uteis
-// ------------------------------------------------------------------
-
-body 
-	#contentWrapper
-		.wrapper 
-			.distanciaTable
-				$ninesixty-grid-width: 800px
-				+grid-system(12)
-				form
-					+clearfix
-					display: block
-					float: left
-					margin-top: 40px
-					& > div
-						margin-bottom: 20px
-						+grid(6)
-
-
-
-
-// ------------------------------------------------------------------
-// Sidebar
-// ------------------------------------------------------------------
-
-
-#sidebar
-	.widget
-		+clearfix
-		display: block
-		margin-bottom: 40px
-		h1
-			padding-bottom: 10px
-			margin-bottom: 0
-		h2
-			font-size: 18px
-			margin-bottom: 20px
-			text-transform: none
-			font-weight: 400
-			color: $verde
-			text-align: center
-
-		&#enquete
-			h2
-				padding: 20px 0
-				border-top: 1px solid $verde
-				border-bottom: 1px solid $verde
-				margin-top: 10px
-			form
-				div
-					display: block
-					padding: 10px
-					padding-left: 50px
-					position: relative
-					min-height: 25px
-					margin: 5px 0
-
-					label
-						cursor: pointer
-						font-size: 16px
-
-					input
-						position: absolute
-						left: 10px
-						top: 10px
-						margin: 0
-					
-					&:hover
-						background: $brancoCinza
-
-				button
-					width: 100%
-					margin-top: 5px
-
-		&#publicidade
-			a
-				margin-bottom: 10px
-				display: block
-				img
-					width: 100%
-
-		&#newsletter
-			form
-				input, button
-					width: 100%
-					margin: 5px 0
-					float: left
-
-		&#contato
-			h2
-				font-weight: 700
-				text-align: left
-				text-transform: uppercase
-				margin-bottom: 5px
-				padding-top: 10px
 
 
 
@@ -1193,14 +576,12 @@ body
 			right: 0
 			height: 600px
 			background: rgba($corPrincipalHover, 0.9) center center
-			+transition
 			overflow: hidden
 
 			.container
 				$ninesixty-grid-width: 1200px
 				padding-top: 50px
 				border-bottom: 1px solid $brancoCinza
-				+animate(bounceInUp)
 
 				img
 					width: 320px
@@ -1238,41 +619,41 @@ body
 						top: 20px
 						font-family: 'gf-icons'
 
-			a.gf-icon-map
-				display: block
-				margin: 0 auto
-				width: 140px
-				height: 20px
-				line-height: 20px
-				padding-top: 100px
-				padding-bottom: 20px
-				color: $brancoCinza
-				font-size: 13px
-				font-weight: 900
-				font-family: 'Lato'
-				position: relative
-				text-align: center
-				margin-top: 20px
-				+transition
 
 
-				&:before
-					font-size: 80px
-					line-height: 80px
-					top: 20px
-					left: 50%
-					margin-left: -40px
-					font-family: 'gf-icons'
-					position: absolute
-					font-weight: 100
 
-		.contatos.showMap
-			+animate(bgHide, $delay: 0.5s)
 
-			.container
-				+animate(bounceOutUp)
+		a.gf-icon-map
+			display: block
+			position: absolute
+			bottom: 100px
+			left: 50%
+			margin-left: -70px
+			width: 140px
+			height: 20px
+			line-height: 20px
+			padding-top: 100px
+			padding-bottom: 20px
+			color: $brancoCinza
+			font-size: 13px
+			font-weight: 900
+			font-family: 'Lato'
+			text-align: center
+			margin-top: 20px
+			+transition
 
-			a.gf-icon-map
+
+			&:before
+				font-size: 80px
+				line-height: 80px
+				top: 20px
+				left: 50%
+				margin-left: -40px
+				font-family: 'gf-icons'
+				position: absolute
+				font-weight: 100
+
+			&.showMap
 				background: $corPrincipalHover
 				opacity: 0.9
 				+box-shadow(rgba($black, 0.1) 0 -5px 0 inset)
@@ -1280,6 +661,7 @@ body
 
 				&:hover
 					opacity: 1
+
 
 		.map
 			height: 600px
@@ -1306,95 +688,48 @@ body
 // PAGE GENERAL
 // ------------------------------------------------------------------
 body 
-	#contentWrapper
-		.wrapper 
-			.bigTitle
-				h2
-					color: $verde
-					font-size: 120px
-					letter-spacing: -5px
-					text-align: center
-					display: block
-					margin-bottom: -10px
-
-				p
-					font-size: 20px
-					font-weight: 700
-					text-align: center
-
-#pageHeader
-	background: $brancoCinza
-	margin-top: 20px
-	display: block
-	padding: 20px 0
-	position: relative
-
-	h1
+	
+	#pageContent, #pageHeader
+		width: 100%
 		display: block
-		margin: 0
-
-	a.associe-se
-		padding: 12px
-		font-size: 14px
-		line-height: 18px
-		margin-top: -30px
-		top: 50%
-		right: 0
-		width: 360px
-		position: absolute
-		height: 36px
-		span
-			font-size: 12px
-
-		&:hover
-			+scale(1.4)
-
-
-	&.active
-		+animate(fadeIn, $delay: 1s)
-
-		a.associe-se
-			+animate(fadeInRightBig, $delay: 2s)
-
-
-
-.custom-upload
-	position: relative
-	cursor: pointer
-	margin-top: 10px
-	input
-		width: 100%
-		margin: 0
-
-	input[type=file]
-		outline: none
 		position: relative
-		text-align: right
-		opacity: 0
-		z-index: 2
-		width: 100%
-		height: 100%
-	.fake-file
-		position: absolute
-		top: 0px
-		left: 0px
-		right: 0
-		bottom: 0
+		
+	#pageHeader
+		background: $corPrincipal
+		margin-top: 150px
 		padding: 0
-		margin: 0
-		z-index: 1
-		line-height: 100%
+		padding: 20px 0
 
-		&:after
-			display: block
-			width: 250px
-			position: absolute
-			top: 0
-			bottom: 0
-			right: 0
-			+button3d
-			content: "Fazer upload"
-			height: 40px
-			background: $cinzaClaro
-			color: $cinzaEscuro
-			+border-radius(0 5px 5px 0)
+		.wrapper
+			+grid-system(12)
+
+			h1
+				display: block
+				margin: 0
+				color: $brancoCinza
+				+grid(12)
+				text-align: right
+
+			&.active
+				+animate(fadeIn, $delay: 1s)
+
+	#pageContent
+		.wrapper
+			+grid-system(12)
+			padding: 40px 0
+
+			& > *
+				+grid(12)
+				margin-bottom: 50px
+
+				& > h2
+					display: block
+					width: 100%
+					text-align: center
+					font-size: 40px
+					font-weight: 300
+
+
+
+
+

@@ -20,6 +20,10 @@ $("body > header").waypoint(function() {
 	$(this).addClass("lean");
 }, { offset: -110 });
 
+$("#pageContent .wrapper > section").waypoint(function() {
+	$(this).addClass("active");
+}, { offset: 600 });
+
 $( ".lang_search .icon" ).click(function() {
 	$( ".lang_search div" ).slideToggle( "slow", function() {});
 	return(false);

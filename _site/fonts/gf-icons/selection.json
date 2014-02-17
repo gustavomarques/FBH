@@ -22,7 +22,7 @@
 				"name": "heart",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 25
 		},
 		{
@@ -46,7 +46,7 @@
 				"name": "heart2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 26
 		},
 		{
@@ -68,7 +68,7 @@
 				"name": "share",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 23
 		},
 		{
@@ -92,7 +92,7 @@
 				"name": "location",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 18
 		},
 		{
@@ -117,7 +117,7 @@
 				"name": "phone",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 0
 		},
 		{
@@ -141,7 +141,7 @@
 				"name": "map",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 19
 		},
 		{
@@ -163,7 +163,7 @@
 				"name": "location2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 21
 		},
 		{
@@ -187,7 +187,7 @@
 				"name": "star",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 27
 		},
 		{
@@ -211,7 +211,7 @@
 				"name": "star2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 28
 		},
 		{
@@ -236,7 +236,7 @@
 				"name": "thumbs-up",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 29
 		},
 		{
@@ -262,7 +262,7 @@
 				"name": "chat",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 31
 		},
 		{
@@ -288,7 +288,7 @@
 				"name": "comment",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 32
 		},
 		{
@@ -313,7 +313,7 @@
 				"name": "user",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 13
 		},
 		{
@@ -337,7 +337,7 @@
 				"name": "users",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 14
 		},
 		{
@@ -358,7 +358,7 @@
 				"name": "user-add",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 15
 		},
 		{
@@ -381,7 +381,7 @@
 				"name": "export",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 17
 		},
 		{
@@ -404,7 +404,7 @@
 				"name": "forward",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 12
 		},
 		{
@@ -428,7 +428,7 @@
 				"name": "reply-all",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 11
 		},
 		{
@@ -454,7 +454,7 @@
 				"name": "reply",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 10
 		},
 		{
@@ -479,7 +479,7 @@
 				"name": "pencil",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 6
 		},
 		{
@@ -505,7 +505,7 @@
 				"name": "mail",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 4
 		},
 		{
@@ -527,7 +527,7 @@
 				"name": "paperclip",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 8
 		},
 		{
@@ -549,7 +549,7 @@
 				"name": "quote",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 33
 		},
 		{
@@ -572,7 +572,7 @@
 				"name": "house",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 34
 		},
 		{
@@ -595,7 +595,7 @@
 				"name": "link",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 40
 		},
 		{
@@ -619,7 +619,7 @@
 				"name": "camera",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 46
 		},
 		{
@@ -644,7 +644,7 @@
 				"name": "cross",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 120
 		},
 		{
@@ -667,7 +667,7 @@
 				"name": "checkmark",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 119
 		},
 		{
@@ -690,7 +690,7 @@
 				"name": "plus",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 128
 		},
 		{
@@ -714,7 +714,7 @@
 				"name": "minus",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 127
 		},
 		{
@@ -738,7 +738,7 @@
 				"name": "layout",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 149
 		},
 		{
@@ -762,7 +762,7 @@
 				"name": "list",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 147
 		},
 		{
@@ -786,7 +786,7 @@
 				"name": "list2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 150
 		},
 		{
@@ -808,7 +808,7 @@
 				"name": "play",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 171
 		},
 		{
@@ -831,7 +831,7 @@
 				"name": "record",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 173
 		},
 		{
@@ -854,7 +854,7 @@
 				"name": "arrow-down",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 206
 		},
 		{
@@ -877,7 +877,7 @@
 				"name": "arrow-right",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 208
 		},
 		{
@@ -900,7 +900,7 @@
 				"name": "arrow-up",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 207
 		},
 		{
@@ -923,7 +923,7 @@
 				"name": "arrow-left",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 205
 		},
 		{
@@ -947,7 +947,7 @@
 				"name": "arrow-down2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 202
 		},
 		{
@@ -971,7 +971,7 @@
 				"name": "arrow-left2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 201
 		},
 		{
@@ -995,7 +995,7 @@
 				"name": "arrow-up2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 203
 		},
 		{
@@ -1019,7 +1019,7 @@
 				"name": "arrow-right2",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 204
 		},
 		{
@@ -1042,7 +1042,7 @@
 				"name": "ellipsis",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 222
 		},
 		{
@@ -1064,7 +1064,7 @@
 				"name": "github",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 238
 		},
 		{
@@ -1086,7 +1086,7 @@
 				"name": "flickr",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 240
 		},
 		{
@@ -1108,7 +1108,7 @@
 				"name": "vimeo",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 242
 		},
 		{
@@ -1130,7 +1130,7 @@
 				"name": "twitter",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 244
 		},
 		{
@@ -1152,7 +1152,7 @@
 				"name": "facebook",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 246
 		},
 		{
@@ -1174,7 +1174,7 @@
 				"name": "googleplus",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 249
 		},
 		{
@@ -1196,7 +1196,7 @@
 				"name": "pinterest",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 251
 		},
 		{
@@ -1218,7 +1218,7 @@
 				"name": "tumblr",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 253
 		},
 		{
@@ -1240,7 +1240,7 @@
 				"name": "linkedin",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 255
 		},
 		{
@@ -1262,7 +1262,7 @@
 				"name": "dribbble",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 257
 		},
 		{
@@ -1284,7 +1284,7 @@
 				"name": "instagram",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 268
 		},
 		{
@@ -1306,7 +1306,7 @@
 				"name": "dropbox",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 269
 		},
 		{
@@ -1328,7 +1328,7 @@
 				"name": "skype",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 272
 		},
 		{
@@ -1350,7 +1350,7 @@
 				"name": "behance",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 280
 		},
 		{
@@ -1372,7 +1372,7 @@
 				"name": "smashing",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 283
 		},
 		{
@@ -1394,7 +1394,7 @@
 				"name": "cc",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 225
 		},
 		{
@@ -1416,7 +1416,7 @@
 				"name": "resize-shrink",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 180
 		},
 		{
@@ -1439,7 +1439,7 @@
 				"name": "resize-enlarge",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 179
 		},
 		{
@@ -1464,7 +1464,7 @@
 				"name": "menu",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 184
 		},
 		{
@@ -1487,7 +1487,7 @@
 				"name": "safari",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 449
 		},
 		{
@@ -1510,7 +1510,7 @@
 				"name": "opera",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 448
 		},
 		{
@@ -1533,7 +1533,7 @@
 				"name": "IE",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 447
 		},
 		{
@@ -1556,7 +1556,7 @@
 				"name": "firefox",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 446
 		},
 		{
@@ -1579,7 +1579,7 @@
 				"name": "chrome",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 445
 		},
 		{
@@ -1601,7 +1601,7 @@
 				"name": "css3",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 444
 		},
 		{
@@ -1623,7 +1623,7 @@
 				"name": "html5",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 443
 		},
 		{
@@ -1645,7 +1645,7 @@
 				"name": "html52",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 442
 		},
 		{
@@ -1667,7 +1667,7 @@
 				"name": "windows8",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 410
 		},
 		{
@@ -1689,7 +1689,7 @@
 				"name": "windows",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 409
 		},
 		{
@@ -1712,7 +1712,7 @@
 				"name": "android",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 408
 		},
 		{
@@ -1734,7 +1734,7 @@
 				"name": "finder",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 407
 		},
 		{
@@ -1755,7 +1755,7 @@
 				"name": "apple",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 406
 		},
 		{
@@ -1777,7 +1777,7 @@
 				"name": "tux",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 405
 		},
 		{
@@ -1803,7 +1803,7 @@
 				"name": "earth",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 194
 		},
 		{
@@ -1827,7 +1827,7 @@
 				"name": "camera2",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 15
 		},
 		{
@@ -1850,7 +1850,7 @@
 				"name": "pictures",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 156
 		},
 		{
@@ -1874,7 +1874,7 @@
 				"name": "cycle",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 136
 		},
 		{
@@ -1897,7 +1897,7 @@
 				"name": "cw",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 137
 		},
 		{
@@ -1923,7 +1923,7 @@
 				"name": "rocket",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 80
 		},
 		{
@@ -1946,7 +1946,7 @@
 				"name": "network",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 73
 		},
 		{
@@ -1972,7 +1972,7 @@
 				"name": "key",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 74
 		},
 		{
@@ -1996,7 +1996,7 @@
 				"name": "lock",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 115
 		},
 		{
@@ -2018,7 +2018,7 @@
 				"name": "lock-open",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 116
 		},
 		{
@@ -2039,7 +2039,7 @@
 				"name": "infinity",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 97
 		},
 		{
@@ -2061,7 +2061,7 @@
 				"name": "dot",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 224
 		},
 		{
@@ -2088,7 +2088,7 @@
 				"name": "cog",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 144
 		},
 		{
@@ -2112,7 +2112,7 @@
 				"name": "search",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 36
 		},
 		{
@@ -2134,7 +2134,7 @@
 				"name": "flickr2",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 377
 		},
 		{
@@ -2156,7 +2156,7 @@
 				"name": "flickr3",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 378
 		},
 		{
@@ -2179,7 +2179,7 @@
 				"name": "github2",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 394
 		},
 		{
@@ -2202,7 +2202,7 @@
 				"name": "github3",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 392
 		},
 		{
@@ -2224,7 +2224,7 @@
 				"name": "youtube",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 371
 		},
 		{
@@ -2246,8 +2246,52 @@
 				"name": "youtube2",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 3,
 			"iconIdx": 372
+		},
+		{
+			"icon": {
+				"paths": [
+					"M1024 410.993c0 156.94-37.411 280.912-112.226 371.931-74.791 91.021-183.853 150.649-327.209 178.903v-163.217c106.721-33.483 178.395-91.009 215.007-172.622 18.813-42.902 26.685-87.364 23.548-133.392h-246.374v-412.723h447.255v331.121z",
+					"M447.261 410.993c0 159.017-38.447 283.509-115.341 373.504-76.892 89.956-184.916 149.076-324.094 177.332v-163.217c105.705-32.432 176.826-91.009 213.436-175.763 20.965-44.99 29.321-88.412 25.121-130.251h-246.383v-412.725h447.261v331.121z"
+				],
+				"grid": 0,
+				"tags": [
+					"quote-right"
+				]
+			},
+			"properties": {
+				"order": 98,
+				"id": 1,
+				"prevSize": 32,
+				"code": 58959,
+				"name": "quote-right",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M0 630.708c0-156.938 37.409-280.914 112.226-371.933 74.791-91.021 183.853-150.647 327.207-178.903v163.217c-106.721 33.483-178.395 91.009-215.007 172.622-18.813 42.902-26.685 87.364-23.548 133.392h246.378v412.723h-447.257v-331.119z",
+					"M576.741 630.708c0-159.017 38.447-283.509 115.341-373.504 76.892-89.956 184.916-149.076 324.094-177.332v163.217c-105.705 32.432-176.826 91.009-213.436 175.763-20.965 44.99-29.321 88.412-25.121 130.251h246.381v412.723h-447.259v-331.119z"
+				],
+				"grid": 0,
+				"tags": [
+					"quote-left"
+				]
+			},
+			"properties": {
+				"order": 99,
+				"id": 0,
+				"prevSize": 32,
+				"code": 58960,
+				"name": "quote-left",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 1
 		}
 	],
 	"height": 1024,

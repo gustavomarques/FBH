@@ -110,6 +110,8 @@
 		'gf-icon-github3': '&#xe64c;',
 		'gf-icon-youtube': '&#xe64d;',
 		'gf-icon-youtube2': '&#xe64e;',
+		'gf-icon-quote-right': '&#xe64f;',
+		'gf-icon-quote-left': '&#xe650;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),

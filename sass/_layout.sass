@@ -22,7 +22,7 @@ header.active
 body
 	background: $branco
 
-	header
+	& > header
 		width: 100%
 		display: block
 		position: fixed
@@ -32,7 +32,7 @@ body
 		height: 150px
 		z-index: 98
 		background: $branco
-		+box-shadow(rgba(0,0,0,0.2) 0px 2px 20px)		
+		+box-shadow(rgba(0,0,0,0.2) 0px 2px 20px)	
 
 		& > section
 			width: 100%
@@ -145,7 +145,7 @@ body
 						position: relative
 						a
 							text-transform: uppercase
-							padding: 0 16px
+							padding: 0 13px
 							font-size: 12px
 							display: table-cell
 							line-height: 18px
@@ -160,6 +160,7 @@ body
 							position: absolute
 							left: 0px
 							overflow: hidden
+							+box-shadow(rgba(0,0,0,0.2) 0px 2px 5px)	
 
 							li
 								display: block
@@ -170,7 +171,7 @@ body
 									display: block
 									height: auto
 									padding: 15px 30px
-									border-top: 1px solid rgba($corPrincipalHover, 0.3)
+									border-top: 1px solid rgba($corPrincipalHover, 0.6)
 									color: $brancoCinza
 									text-align: left
 
@@ -215,9 +216,10 @@ body
 		display: block
 		position: relative
 		background: url(../img/no-banner.jpg) center center no-repeat
+		+bgCover
 
 		.dot
-			background: rgba($corPrincipalHover, 0.9) url(../img/dot.png) center center
+			background: url(../img/dot.png) center center
 			background-attachment: fixed
 			position: absolute
 			top: 0
@@ -470,6 +472,7 @@ body
 		ul
 			li
 				+grid(4, $gutter-width: 2px)
+				margin: 1px
 				position: relative
 				height: 500px
 				overflow: hidden
@@ -501,7 +504,7 @@ body
 
 					.caption
 						position: absolute
-						background: rgba($black, 0.7)
+						background: rgba($corPrincipal, 0.8)
 						padding: 20px
 						bottom: 0
 						left: 0
@@ -509,19 +512,23 @@ body
 						+clearfix
 						+transition
 
-						h2
-							font-size: 24px
-							font-weight: 100
-							color: $brancoCinza
-							margin-bottom: 10px
+						h1
+							+transition
+							font-size: 20px
+							color: $corPrincipalInverso
+							font-weight: 300
+							margin: 0
 						p
-							color: $brancoCinza
 							+transition
 							display: none
+							color: $corPrincipalInverso
+							margin: 10px 0 0 0
 
 					&:hover
-						.caption p
-							display: block
+						.caption
+							background: rgba($corPrincipalHover, 0.9)
+							p
+								display: block
 							
 						.date
 							background: rgba($corPrincipalHover, 1)
@@ -574,7 +581,7 @@ body
 			left: 0
 			right: 0
 			height: 600px
-			background: rgba($corPrincipalHover, 0.9) center center
+			background: rgba($black, 0.8) center center
 			overflow: hidden
 
 			.container
@@ -694,10 +701,21 @@ body
 		position: relative
 		
 	#pageHeader
-		background: $corPrincipal
+		background: $corPrincipalHover url(../img/header-interna.jpg) top center no-repeat
 		margin-top: 150px
 		padding: 0
-		padding: 20px 0
+		padding: 80px 0
+		position: relative
+		display: block
+
+		.dot
+			background: url(../img/dot.png)
+			background-attachment: fixed
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
 
 		.wrapper
 			+grid-system(12)
@@ -745,87 +763,151 @@ img.left
 	float: left
 	margin: 0 30px 20px 0
 
-body #pageContent .wrapper > section
-	+grid(12)
-	img
-		margin-bottom: 20px
-
-	&.quote
+body #pageContent .wrapper
+	& > section
 		+grid(12)
-		& > p:nth-of-type(1)
-			font-style: italic
-			font-size: 18px
-			font-weight: 400
-			color: $corPrincipal
-			position: relative
-			&:before, &:after
-				font-family: 'gf-icons'
-				speak: none
-				font-style: normal
-				font-weight: normal
-				font-variant: normal
-				text-transform: none
-				line-height: 1
-				-webkit-font-smoothing: antialiased
-				-moz-osx-font-smoothing: grayscale
-				font-size: 99
-				position: absolute
-				z-index: -1
-				color: $brancoCinza
-				font-size: 200px
-				top: -80px
-				left: 0
-				content: "\e650"
-			&:after
-				content: "\e64f"
-				right: 0
-				left: auto
+		img
+			margin-bottom: 20px
+			width: 100%
 
-	&.equipe
-		+grid(12, $gutter-width: 0)
-		& > ul
-			li
+		&.quote
+			+grid(12)
+			& > p:nth-of-type(1)
+				font-style: italic
+				font-size: 18px
+				font-weight: 400
+				color: $corPrincipal
 				position: relative
-				margin: 0
-				padding: 20px
-				padding-bottom: 0
-				margin-bottom: 10px
-				+grid(2, $gutter-width: 0)
-				+box-sizing(border-box)
-				+border-radius(10px)
-				
-				&, & *
-					+transition
+				&:before, &:after
+					font-family: 'gf-icons'
+					speak: none
+					font-style: normal
+					font-weight: normal
+					font-variant: normal
+					text-transform: none
+					line-height: 1
+					-webkit-font-smoothing: antialiased
+					-moz-osx-font-smoothing: grayscale
+					font-size: 99
+					position: absolute
+					z-index: -1
+					color: $brancoCinza
+					font-size: 200px
+					top: -80px
+					left: 0
+					content: "\e650"
+				&:after
+					content: "\e64f"
+					right: 0
+					left: auto
 
-				& > img
-					+border-radius(100%)
-					display: block
-					float: none
-					+scale(0.8)
-					margin-bottom: -10px
-					width: 100%
-				h3
-					font-size: 24px
-					text-align: center
-					margin-bottom: 0
-					height: 80px
-					display: table-cell
-					vertical-align: middle
-
-				h4
-					font-size: 13px
-					color: $corPrincipal
-					text-align: center
-
-				&:hover
-					background: $brancoCinza
-					h3
-						+translateY(25px)
-					h4
-						opacity: 0
+		&.equipe
+			+grid(12, $gutter-width: 0)
+			& > ul
+				li
+					position: relative
+					margin: 0
+					padding: 20px
+					padding-bottom: 0
+					margin-bottom: 10px
+					+grid(2, $gutter-width: 0)
+					+box-sizing(border-box)
+					+border-radius(10px)
+					
+					&, & *
+						+transition
 
 					& > img
-						+scale(1)
+						+border-radius(100%)
+						display: block
+						float: none
+						+scale(0.8)
+						margin-bottom: -10px
+						width: 100%
+					h3
+						font-size: 24px
+						text-align: center
+						margin-bottom: 0
+						height: 80px
+						display: table-cell
+						vertical-align: middle
+
+					h4
+						font-size: 13px
+						color: $corPrincipal
+						text-align: center
+
+					&:hover
+						background: $brancoCinza
+						h3
+							+translateY(25px)
+						h4
+							opacity: 0
+
+						& > img
+							+scale(1)
+
+	#paginator
+		+grid(12)
+		background: $brancoCinza
+		+border-radius(5px)
+		display: block
+		text-align: center
+		position: relative
+		height: 45px
+		padding: 10px 80px
+
+		a
+			display: inline-block
+			+border-radius(50%)
+			height: 25px
+			width: 25px
+			background: $branco
+			color: $corPrincipal
+			line-height: 25px
+			margin: 0 10px
+			+font(700)
+			font-size: 11px
+
+			&:hover, &.active
+				background: $corPrincipal
+				color: $brancoCinza
+				+scale(1.3)
+
+			&.next, &.prev
+				position: absolute
+				top: 0
+				bottom: 0
+				height: 45px
+				line-height: 45px
+				font-size: 30px
+				width: 70px
+				background: $brancoCinza
+				color: $corPrincipal
+				text-align: center
+				text-indent: 0
+				margin: 0
+				+icon
+				&:hover
+					+scale(1)
+					background: $corPrincipal
+					color: $brancoCinza
+
+			&.next
+				right: 0
+				border-left: 2px solid $branco
+				+border-radius(0 5px 5px 0)
+				&:before
+					content: "\e62b"
+					line-height: 45px
+
+			&.prev
+				left: 0
+				border-right: 2px solid $branco
+				+border-radius(5px 0 0 5px)
+				&:before
+					content: "\e629"
+					line-height: 45px
 
 
 
@@ -833,12 +915,196 @@ body #pageContent .wrapper > section
 
 
 
+// ------------------------------------------------------------------
+// PAGE TYPES - Category of posts
+// ------------------------------------------------------------------
+
+body #pageContent .wrapper > section
+
+	&.post
+		+grid(12)
+
+		h1
+			text-align: center
+
+		.infos
+			margin-bottom: 0
+			background: $brancoCinza
+			+border-radius(5px 5px 0 0)
+			padding: 10px 20px
+			display: block
+			+clearfix
+
+			p
+				text-align: right
+				display: block
+				margin: 0
+				width: 50%
+				float: right
+				
+				&.breadcrumb
+					float: left
+					text-align: left
+
+					a:before
+						content: " / "
+						color: $corTexto
+
+					a:first-child:before
+						content: " FBH / "
 
 
+		.divisor
+			background: url(../img/divisor-bg.png) center center repeat-x
+			display: block
+			text-align: center
+			padding: 20px
+			margin-bottom: 20px
+
+			a
+				padding: 10px 20px
+				line-height: 20px
+				display: inline-block
+				font-size: 12px
+				+border-radius(5px)
+				border: 2px solid $cinzaClaro
+				background: $branco
+				font-size: 12px
+				color: $cinzaClaro
+				font-weight: 700
+				text-transform: uppercase
+				margin: 0 10px
+
+				&:hover
+					color: $corPrincipalInverso
+					background: $corPrincipal
+					+box-shadow(rgba($black, 0.1) 0 -5px 0 inset)
+					border: 2px solid $corPrincipalHover
+
+		.comentarios
+			display: block
+			li
+				display: block
+				margin-bottom: 20px
+
+				& > article
+					background: $brancoCinza
+					+border-radius(10px)
+					position: relative
+					display: block
+					min-height: 110px
+					padding: 20px
+					+clearfix
+
+					img
+						float: left
+						+border-radius(50%)
+						border: 5px solid $branco
+						width: 100px
+						height: 100px
+						margin-right: 20px
+
+					h6
+						color: $corPrincipal
+						border-bottom: 1px solid $cinzaClaro
+						font-weight: 700
+						text-transform: none
+						padding-bottom: 10px
+						margin-bottom: 10px
+
+					span
+						display: block
+						margin-bottom: 10px
+
+					& > a
+						+button3d
+						float: right
+						font-size: 12px
+				ul
+					margin-left: 40px
+					margin-top: 10px
+
+
+
+// ------------------------------------------------------------------
+// PAGE TYPES - Pagina internas
+// Fale Conosco
+// ------------------------------------------------------------------
+
+body #pageContent .wrapper
+	& > .contato
+		[class^="gf-icon-"], [class*=" gf-icon-"]
+			min-height: 35px
+			font-size: 16px
+
+			&:before
+				margin-right: 10px
+				font-size: 20px
+				height: 20px
+				width: 20px
+				line-height: 20px
+				color: $corPrincipal
+				padding: 10px
+				+border-radius(50%)
+				border: 2px solid $corPrincipal
+
+	& > .map
+		+grid(12)
+
+	& > form
+		+clearfix
 		
+		input
+			+grid(4)
 
+		textarea
+			+grid(12)
+			min-height: 150px
 
+		button
+			+grid(4)
+			float: right
+						
 
+// ------------------------------------------------------------------
+// PAGE TYPES - Pagina internas
+// Eventos
+// ------------------------------------------------------------------
+
+body #pageContent .wrapper
+	& > .contato
+		[class^="gf-icon-"], [class*=" gf-icon-"]
+			min-height: 35px
+			font-size: 16px
+
+			&:before
+				margin-right: 10px
+				font-size: 20px
+				height: 20px
+				width: 20px
+				line-height: 20px
+				color: $corPrincipal
+				padding: 10px
+				+border-radius(50%)
+				border: 2px solid $corPrincipal
+
+	& > .map
+		+grid(12)
+
+	& > form
+		+clearfix
+
+		input
+			+grid(4)
+
+		textarea
+			+grid(12)
+			min-height: 150px
+
+		button
+			+grid(4)
+			float: right
+						
 
 
 

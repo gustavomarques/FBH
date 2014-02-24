@@ -15,8 +15,12 @@
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-	<link rel="stylesheet" href="{{ site.url }}css/style.css">
-	<link rel="stylesheet" href="{{ site.url }}css/ie.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!--[if IE]>
+		<link rel="stylesheet" href="style.css">
+	<![endif]-->
+
 </head>
 
 <body id="{{ page.id }}">
@@ -51,7 +55,21 @@
 				<a href="index.html" title="" class="logo">
 					<img src="img/logo-fbh.png">
 				</a>
-				<ul id="nav">			
+				<ul id="nav">	
+					<li>
+						<a href="#" title="">WP</a>
+						<ul>
+							<li>
+								<a href="page.html" title="">Page</a>
+							</li>
+							<li>
+								<a href="category.html" title="">Category</a>
+							</li>
+							<li>
+								<a href="post.html" title="">Post</a>
+							</li>
+						</ul>
+					</li>
 					<li>
 						<a href="#" title="">Sobre <br>a FBH</a>
 						<ul>
@@ -130,7 +148,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#" title="">Calendário <br> de eventos</a>
+						<a href="eventos.html" title="">Calendário <br> de eventos</a>
 					</li>
 					<li>
 						<a href="#" title="">Sala de <br> imprensa</a>
@@ -148,7 +166,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#" title="">fale <br> conosco</a>
+						<a href="contato.html" title="">fale <br> conosco</a>
 					</li>
 				</ul>
 

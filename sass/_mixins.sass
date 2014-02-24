@@ -73,7 +73,7 @@
 	-ms-filter: grayscale($gray)
 	-o-filter: grayscale($gray)
 
-@mixin icon
+@mixin icon($content: "\e629")
 	font-family: 'gf-icons'
 	speak: none
 	font-style: normal
@@ -84,6 +84,7 @@
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	font-size: 30px
+	content: $content
 
 
 

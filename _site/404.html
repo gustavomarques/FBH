@@ -15,8 +15,12 @@
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/ie.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!--[if IE]>
+		<link rel="stylesheet" href="style.css">
+	<![endif]-->
+
 </head>
 
 <body id="404">
@@ -51,7 +55,21 @@
 				<a href="index.html" title="" class="logo">
 					<img src="img/logo-fbh.png">
 				</a>
-				<ul id="nav">			
+				<ul id="nav">	
+					<li>
+						<a href="#" title="">WP</a>
+						<ul>
+							<li>
+								<a href="page.html" title="">Page</a>
+							</li>
+							<li>
+								<a href="category.html" title="">Category</a>
+							</li>
+							<li>
+								<a href="post.html" title="">Post</a>
+							</li>
+						</ul>
+					</li>
 					<li>
 						<a href="#" title="">Sobre <br>a FBH</a>
 						<ul>
@@ -130,7 +148,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#" title="">Calendário <br> de eventos</a>
+						<a href="eventos.html" title="">Calendário <br> de eventos</a>
 					</li>
 					<li>
 						<a href="#" title="">Sala de <br> imprensa</a>
@@ -148,7 +166,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#" title="">fale <br> conosco</a>
+						<a href="contato.html" title="">fale <br> conosco</a>
 					</li>
 				</ul>
 
@@ -428,7 +446,7 @@
 		</div>
 		<a href="#" title="" class="gf-icon-map">Ver no mapa</a>
 		<div class="map">
-			<iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?source=s_q&amp;hl=pt-BR&amp;geocode=&amp;aq=&amp;ie=UTF8&amp;hq=&amp;hnear=Srtvs+-+Bras%C3%ADlia,+Distrito+Federal,+Brasil&amp;msa=0&amp;msid=203115602980208860506.0004a045bfcbcdcc22ed1&amp;ll=-15.798613,-47.880456&amp;spn=0.012925,0.020385&amp;t=m&amp;z=16&amp;output=embed"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15356.423909502624!2d-47.88408299999996!3d-15.798364999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ3JzU0LjEiUyA0N8KwNTMnMDIuNyJX!5e0!3m2!1spt-BR!2s!4v1393097699636" width="100%" height="600" frameborder="0" style="border:0"></iframe>
 		</div>
 		
 		<span class="direitos">@Todos os direitos reservados - Federação brasileira de Hospitais</span>
